@@ -1,27 +1,36 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.fundo{
+  background-color: #4c264b;
+  background-blend-mode: overlay;
+  height: 100vh; // altura virtual = altura da tela
+  display: flex;
+  align-items: center;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.conteudo{
+  background: #FFFFFFbb;
+  margin: 0 24px;
+  padding: 18px;
+  border-radius: 16px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.charada{
+  font-size: 30px;
 }
 
-#container a {
-  text-decoration: none;
+.puff-in-center { /*aplicativo animista*/
+	animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+ @keyframes puff-in-center {
+  0% {
+    transform: scale(2);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
